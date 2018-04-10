@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -51,9 +52,9 @@ namespace Matematica {
             Numero4.Text = Random.Next(0, 99).ToString();
             Numero5.Text = Random.Next(0, 99).ToString();
             Numero6.Text = Random.Next(0, 99).ToString();
-            int Resultado1 = int.Parse(Numero1.Text) - int.Parse(Numero2.Text);
-            int Resultado2 = int.Parse(Numero3.Text) - int.Parse(Numero4.Text);
-            int Resultado3 = int.Parse(Numero5.Text) - int.Parse(Numero6.Text);
+            int Resultado1 = int.Parse(Numero1.Text) + int.Parse(Numero2.Text);
+            int Resultado2 = int.Parse(Numero3.Text) + int.Parse(Numero4.Text);
+            int Resultado3 = int.Parse(Numero5.Text) + int.Parse(Numero6.Text);
             this.Resultado1 = Resultado1;
             this.Resultado2 = Resultado2;
             this.Resultado3 = Resultado3;
@@ -85,7 +86,7 @@ namespace Matematica {
                     Tentativa2 = int.Parse(Resp2.Text);
                     Tentativa3 = int.Parse(Resp3.Text);
                 }
-
+           
                 if (Resp1.Text == null)
                 {
                     Resp1.Text = "0";
@@ -100,7 +101,9 @@ namespace Matematica {
                 }
                 else
                 {
-                    int ponto = 0;
+                List<string> Lista = new List<string>();
+                int ponto = 0;
+                string[] mensagens =  new string[3];
                     if (Resultado1 == Tentativa1)
                     {
                         Res1.Text = "Certo!";
@@ -111,6 +114,9 @@ namespace Matematica {
                     {
                         Res1.Text = "Errado!";
                         Res1.ForeColor = Color.Red;
+                        string erro = "Resposta da questão 1: " + Resultado1.ToString();
+                    Lista.Add(erro);
+                        
                     }
                     if (Resultado2 == Tentativa2)
                     {
@@ -122,23 +128,38 @@ namespace Matematica {
                     {
                         Res2.Text = "Errado!";
                         Res2.ForeColor = Color.Red;
-                    }
+                    string erro = "Resposta da questão 2: " +  Resultado2.ToString();
+                    Lista.Add(erro);
+                        
+                }
                     if (Resultado3 == Tentativa3)
                     {
                         Res3.Text = "Certo!";
                         Res3.ForeColor = Color.Green;
                         ponto++;
-                    }
+
+                     }
                     else
                     {
                         Res3.Text = "Errado!";
                         Res3.ForeColor = Color.Red;
-                    }
+                        string erro = "Resposta da questão 3: " + Resultado3.ToString();
+                        Lista.Add(erro);
+                }
                     if (ponto == 3)
                     {
                         MessageBox.Show("Muito bem! Você acertou todas as questões :D");
                     }
+                else
+                {
+                    string s = "Oops, parece que houveram alguns erros! Veja-os abaixo: \n";
+                    foreach(string x in Lista)
+                    {
+                        s += x + "\n";
+                    }
+                    MessageBox.Show(s);
                 }
+            }
             
         }
     }
