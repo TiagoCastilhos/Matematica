@@ -26,6 +26,12 @@ namespace Matematica {
             relogio.Stop();
         }
 
+        private void PlayAgain_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            new Divisao().Show();
+        }
+
         public Divisao()
         {
             InitializeComponent();
