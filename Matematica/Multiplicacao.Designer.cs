@@ -255,6 +255,7 @@
             this.Name = "Multiplicacao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Multiplicacao";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Multiplicacao_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

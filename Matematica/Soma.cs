@@ -9,6 +9,11 @@ namespace Matematica {
         bool TempoAcabou;
         Timer relogio = new Timer();
 
+        private void Soma_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            relogio.Stop();
+        }
+
         public Soma()
         {
             InitializeComponent();

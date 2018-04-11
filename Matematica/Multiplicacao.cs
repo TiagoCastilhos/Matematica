@@ -9,6 +9,11 @@ namespace Matematica {
         int Resultado1, Resultado2, Resultado3;
         bool TempoAcabou;
 
+        private void Multiplicacao_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            relogio.Stop();
+        }
+
         public Multiplicacao()
         {
             InitializeComponent();

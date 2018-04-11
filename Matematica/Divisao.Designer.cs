@@ -254,6 +254,7 @@
             this.Name = "Divisao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Divisão";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Divisao_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -254,6 +254,7 @@
             this.Name = "Soma";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Soma";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Soma_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

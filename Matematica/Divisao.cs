@@ -21,6 +21,11 @@ namespace Matematica {
             }
         }
 
+        private void Divisao_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            relogio.Stop();
+        }
+
         public Divisao()
         {
             InitializeComponent();

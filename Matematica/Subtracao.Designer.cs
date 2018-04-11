@@ -255,6 +255,7 @@
             this.Name = "Subtracao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Subtração";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Subtracao_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 
