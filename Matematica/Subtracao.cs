@@ -6,7 +6,7 @@ using System.Windows.Forms;
 namespace Matematica {
     public partial class Subtracao : Form {
         int Resultado1, Resultado2, Resultado3;
-        static Timer relogio = new Timer();
+        Timer relogio = new Timer();
         bool TempoAcabou;
 
         public Subtracao()

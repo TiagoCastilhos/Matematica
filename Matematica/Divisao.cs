@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace Matematica {
     public partial class Divisao : Form {
-        static Timer relogio = new Timer();
+        Timer relogio = new Timer();
         int Resultado1, Resultado2, Resultado3;
         bool TempoAcabou;
 

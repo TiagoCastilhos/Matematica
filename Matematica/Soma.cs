@@ -7,7 +7,7 @@ namespace Matematica {
     public partial class Soma : Form {
         int Resultado1, Resultado2, Resultado3;
         bool TempoAcabou;
-        static Timer relogio = new Timer();
+        Timer relogio = new Timer();
 
         public Soma()
         {
